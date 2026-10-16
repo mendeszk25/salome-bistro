@@ -1,0 +1,47 @@
+/* Salomé Bistrô — Motion Revolution · Fases 1–4 */
+:root{--mo-out:cubic-bezier(.16,1,.3,1);--mo-in-out:cubic-bezier(.76,0,.24,1);--mo-spring:cubic-bezier(.34,1.56,.64,1)}
+/* Estados iniciais só existem quando o JS confirmou que vai animar (html.mo-pre). Failsafe remove em 3,5s. */
+html.mo-pre .hero-art{clip-path:inset(18% 14% 18% 14%)}
+html.mo-pre .hero-art>img:not(.ornament){transform:scale(1.35)}
+html.mo-pre .hero-strap,html.mo-pre .hero-description,html.mo-pre .hero-buttons>*,html.mo-pre .hero-edition>*,html.mo-pre .hero-smallprint>*,html.mo-pre .hero-photo-top,html.mo-pre .hero-photo-bottom{opacity:0;transform:translateY(22px)}
+html.mo-pre .hero-orange-stamp,html.mo-pre .hero-corner-ornament{opacity:0}
+html.mo-pre .site-header{opacity:0;transform:translateY(-14px)}
+/* Tipografia cinética: cada palavra numa máscara; o miolo sobe girado e assenta */
+.mo-line{display:block}
+.mo-word{display:inline-block;overflow:hidden;vertical-align:top;padding:.08em .04em .14em;margin:-.08em -.04em -.14em}
+.mo-word>span{display:inline-block;will-change:transform;transform-origin:0 100%}
+html.mo-pre .mo-word>span{transform:translateY(112%) rotate(7deg) skewY(5deg)}
+.hero h1 em .mo-word>span{transform-origin:50% 100%}
+/* Hero: saída por scroll e parallax (transform apenas) */
+.hero-art>img:not(.ornament){will-change:transform}
+.hero-copy,.hero-art{will-change:transform}
+.hero-orange-stamp{will-change:transform}
+/* Ticker reage à velocidade do scroll */
+.ticker{will-change:transform;transform-origin:50% 50%}
+/* Magnético */
+[data-magnetic]{will-change:transform}
+@media(hover:none),(pointer:coarse){[data-magnetic]{will-change:auto}}
+/* Fase 2 */
+[data-mo-rev]{opacity:0}
+.welcome-copy h2,.kitchen-top h2{overflow:visible}
+.welcome-facade,.food-gallery figure{will-change:clip-path,transform}
+.food-gallery figure,.welcome-facade{overflow:hidden}
+@media(prefers-reduced-motion:reduce){[data-mo-rev]{opacity:1}
+  html.mo-pre .hero-art{clip-path:none}
+  html.mo-pre .hero-art>img:not(.ornament),html.mo-pre .mo-word>span,html.mo-pre .site-header,html.mo-pre [class^="hero-"],html.mo-pre .hero-buttons>*{transform:none;opacity:1}
+}
+/* Fases 3–4: identidade dinâmica, progressive enhancement */
+.menu-search {transition: box-shadow .3s ease, background-color .3s ease, transform .3s var(--mo-out)}
+.menu-search.mo-search-focus{transform:translateY(-2px);box-shadow:0 6px 0 -5px var(--wine)}
+.menu-item{transform-origin:0 50%}
+.gig-poster{transform-style:preserve-3d;backface-visibility:hidden;will-change:transform}
+.music-posters{perspective:1050px}
+.music-posters .poster-circle{will-change:translate}
+.together-visual{overflow:visible}
+.together-visual>img{will-change:translate,clip-path}
+.g-photo{transform-style:preserve-3d;transition:transform .35s var(--mo-out);will-change:transform}
+.mo-gallery-cursor{position:fixed;top:0;left:0;z-index:150;pointer-events:none;opacity:0;display:grid;place-items:center;width:94px;height:94px;background:#f3c785;color:#381126;border-radius:50%;font:700 12px/1 sans-serif;letter-spacing:.06em;box-shadow:0 14px 40px #0005;transition:opacity .16s ease}
+.mo-gallery-cursor.visible{opacity:1}
+.lightbox img{transform-origin:center center}
+@media(hover:none),(pointer:coarse),(max-width:900px){.mo-gallery-cursor{display:none}.g-photo{will-change:auto}.gig-poster{will-change:auto}}
+@media(prefers-reduced-motion:reduce){.mo-gallery-cursor{display:none}.g-photo{transition:none!important;transform:none!important}.gig-poster{transform:none!important}.menu-search{transition:none!important}}

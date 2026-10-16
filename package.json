@@ -1,0 +1,14 @@
+{
+  "name": "salome-bistro-essencia-retrô",
+  "version": "2.7.0",
+  "private": true,
+  "type": "module",
+  "description": "Salomé Bistrô — gastronomia, música e encontros. Website autoral sem dependências.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="#a7633f" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<g class="engravable"><circle pathLength="1" cx="200" cy="199" r="144" stroke-width="1.6"/><circle pathLength="1" cx="200" cy="199" r="132" stroke-width=".8" stroke-dasharray="2 8"/><circle pathLength="1" cx="200" cy="199" r="112" stroke-width="2"/><circle pathLength="1" cx="200" cy="199" r="102" stroke-width="1"/>
+<path pathLength="1" d="M313 151 C370 133 380 253 312 245 M316 170 C354 166 354 222 319 227" stroke-width="3"/>
+<path pathLength="1" d="M200 263 C143 218 145 173 199 143 C253 171 256 222 200 263Z M199 144 C201 184 208 216 200 262 M196 175 C172 155 146 163 140 185 C156 208 179 206 196 175 M206 175 C224 149 255 156 266 176 C259 198 234 214 206 175 M197 209 C169 194 152 209 156 230 C176 245 189 234 197 209 M207 210 C231 192 253 206 251 227 C231 249 217 231 207 210" stroke-width="1.8"/>
+<path pathLength="1" d="M115 126 Q200 81 281 126 M121 274 Q201 319 277 274" opacity=".55"/>
+</g><path d="M42 42 L58 42 M50 34 V50 M343 346 L359 346 M351 338 V354 M34 312 Q73 270 95 282 M346 81 Q365 110 381 104" stroke-width="1.4"/><circle cx="200" cy="200" r="159" stroke-width=".7" stroke-dasharray="1 10"/></svg>

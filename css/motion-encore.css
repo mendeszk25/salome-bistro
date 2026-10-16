@@ -1,0 +1,20 @@
+/* Salomé — Camada cinematográfica v2.6. Sem conteúdo oculto por padrão. */
+.mo-progress{position:fixed;inset:0 0 auto;height:4px;background:linear-gradient(90deg,#f2c988,#d86b3e,#f5db96);z-index:204;pointer-events:none;transform:scaleX(0);transform-origin:left;box-shadow:0 1px 10px #d86b3e77}
+.mo-cinematic-curtain{position:fixed;z-index:201;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;background:#3b1226;color:#f5e6d5;pointer-events:none;visibility:hidden;clip-path:inset(0 100% 0 0)}
+.mo-cinematic-curtain.mo-active{visibility:visible;pointer-events:auto}
+.mo-curtain-label{font:400 clamp(70px,15vw,240px)/.9 'Italiana',Georgia,serif;letter-spacing:-.045em;text-align:center}
+.mo-curtain-label span{display:block;margin-top:12px;font:600 clamp(15px,2.1vw,25px)/1.2 'Barlow Condensed',sans-serif;letter-spacing:.42em;color:#f1ca8b}
+.mo-curtain-subtitle{font:600 12px/1 'Barlow Condensed',sans-serif;letter-spacing:.23em}
+.mo-replay{display:inline-flex;align-items:center;justify-content:center;margin-top:18px;padding:8px 0 4px;background:transparent;border:0;border-bottom:1px solid #f1ca8b75;color:#f1ca8b;font:600 12px/1.4 'DM Sans',Arial,sans-serif;letter-spacing:.06em;cursor:pointer;transition:color .2s,border-color .2s,letter-spacing .25s}
+.mo-replay:hover{color:#fff5e5;border-color:#fff5e5;letter-spacing:.11em}
+.mo-replay:focus-visible{outline:3px solid #f1ca8b;outline-offset:4px}
+.mo-chapter-arriving{position:relative;isolation:isolate}
+.mo-chapter-arriving::after{content:'';position:absolute;inset:0;z-index:25;pointer-events:none;background:linear-gradient(105deg,transparent 23%,rgba(241,202,139,.13) 42%,rgba(216,107,62,.22) 48%,transparent 58%);transform:translateX(-110%);animation:mo-stage-swipe 1s cubic-bezier(.13,.9,.25,1) both}
+@keyframes mo-stage-swipe{from{transform:translateX(-110%)}to{transform:translateX(110%)}}
+/* Efeito editorial simples, sempre perceptível em hover sem ser um item obrigatório para navegação */
+@media (hover:hover) and (pointer:fine){.gallery-grid .g-photo img{transition:filter .4s ease,scale .7s cubic-bezier(.2,.8,.2,1)}.gallery-grid .g-photo:hover img{scale:1.08;filter:saturate(1.15) contrast(1.07)}.food-to-menu:hover .food-to-menu-arrow{transform:rotate(45deg) scale(1.12)}}
+@media(max-width:650px){.mo-progress{height:3px}.mo-replay{margin-top:12px;font-size:11px}.mo-curtain-label{font-size:clamp(54px,18vw,88px)}}
+@media(prefers-reduced-motion:reduce){.mo-progress,.mo-cinematic-curtain,.mo-replay{display:none!important}.mo-chapter-arriving::after{display:none!important}.gallery-grid .g-photo img{transition:none!important}}
+/* Transformações de capítulos e cortinas não devem criar scroll horizontal. */
+html,body{max-width:100%;overflow-x:clip}
+.mo-reduced-notice{color:#f1ca8b;font:500 12px/1.5 'DM Sans',Arial,sans-serif;margin-top:12px}

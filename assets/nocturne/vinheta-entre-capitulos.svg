@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 100" fill="none" aria-label="vinheta-entre-capitulos.svg"><defs><linearGradient id="copper" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f3d2a5"/><stop offset=".46" stop-color="#c88b58"/><stop offset="1" stop-color="#a45a3b"/></linearGradient><linearGradient id="warm" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d5a270"/><stop offset="1" stop-color="#8a4b36"/></linearGradient></defs><g stroke="url(#copper)" stroke-width="1.6" stroke-linecap="round"><path d="M0 50 H255 M645 50 H900"/><path d="M40 40 H245 M655 40 H860 M40 60 H245 M655 60 H860" stroke-width=".65" opacity=".65"/>
+<path d="M261 50 C330 -8 389 12 450 50 C511 88 570 109 639 50 M261 50 C329 105 389 90 450 50 C511 10 571 -9 639 50"/>
+<path d="M332 50 C369 17 405 23 450 50 C495 78 532 84 568 50 M332 50 C370 83 407 78 450 50 C495 23 531 18 568 50" stroke-width=".8"/>
+<path d="M440 50 Q450 29 460 50 Q450 71 440 50Z" fill="#dba66d"/>
+</g><g transform="translate(323 52) rotate(-85) scale(0.24)" stroke="url(#copper)" stroke-linecap="round" stroke-linejoin="round">
+ <path stroke-width="2" d="M0 0 C-37 -31 -50 -97 -2 -143 C31 -119 44 -49 0 0Z"/>
+ <path stroke-width=".8" d="M0 -3 C-7 -43 -12 -81 -2 -140 M-7 -36 L-29 -63 M-9 -57 L15 -87 M-9 -78 L-22 -106 M-7 -98 L7 -119"/>
+ <path opacity=".42" stroke-width=".62" d="M-20 -47 l13 7 M-27 -66 l16 10 M-25 -86 l15 9 M-16 -106 l10 8 M15 -47 l-18 10 M20 -65 l-25 14 M17 -90 l-22 13"/>
+ <path stroke-width=".75" opacity=".6" d="M-1 -141 Q-15 -124 -18 -105 M-29 -55 Q-24 -27 0 -3"/></g><g transform="translate(386 55) rotate(68) scale(0.22)" stroke="url(#copper)" stroke-linecap="round" stroke-linejoin="round">
+ <path stroke-width="2" d="M0 0 C-37 -31 -50 -97 -2 -143 C31 -119 44 -49 0 0Z"/>
+ <path stroke-width=".8" d="M0 -3 C-7 -43 -12 -81 -2 -140 M-7 -36 L-29 -63 M-9 -57 L15 -87 M-9 -78 L-22 -106 M-7 -98 L7 -119"/>
+ <path opacity=".42" stroke-width=".62" d="M-20 -47 l13 7 M-27 -66 l16 10 M-25 -86 l15 9 M-16 -106 l10 8 M15 -47 l-18 10 M20 -65 l-25 14 M17 -90 l-22 13"/>
+ <path stroke-width=".75" opacity=".6" d="M-1 -141 Q-15 -124 -18 -105 M-29 -55 Q-24 -27 0 -3"/></g><g transform="translate(514 55) rotate(-70) scale(0.22)" stroke="url(#copper)" stroke-linecap="round" stroke-linejoin="round">
+ <path stroke-width="2" d="M0 0 C-37 -31 -50 -97 -2 -143 C31 -119 44 -49 0 0Z"/>
+ <path stroke-width=".8" d="M0 -3 C-7 -43 -12 -81 -2 -140 M-7 -36 L-29 -63 M-9 -57 L15 -87 M-9 -78 L-22 -106 M-7 -98 L7 -119"/>
+ <path opacity=".42" stroke-width=".62" d="M-20 -47 l13 7 M-27 -66 l16 10 M-25 -86 l15 9 M-16 -106 l10 8 M15 -47 l-18 10 M20 -65 l-25 14 M17 -90 l-22 13"/>
+ <path stroke-width=".75" opacity=".6" d="M-1 -141 Q-15 -124 -18 -105 M-29 -55 Q-24 -27 0 -3"/></g><g transform="translate(577 52) rotate(82) scale(0.24)" stroke="url(#copper)" stroke-linecap="round" stroke-linejoin="round">
+ <path stroke-width="2" d="M0 0 C-37 -31 -50 -97 -2 -143 C31 -119 44 -49 0 0Z"/>
+ <path stroke-width=".8" d="M0 -3 C-7 -43 -12 -81 -2 -140 M-7 -36 L-29 -63 M-9 -57 L15 -87 M-9 -78 L-22 -106 M-7 -98 L7 -119"/>
+ <path opacity=".42" stroke-width=".62" d="M-20 -47 l13 7 M-27 -66 l16 10 M-25 -86 l15 9 M-16 -106 l10 8 M15 -47 l-18 10 M20 -65 l-25 14 M17 -90 l-22 13"/>
+ <path stroke-width=".75" opacity=".6" d="M-1 -141 Q-15 -124 -18 -105 M-29 -55 Q-24 -27 0 -3"/></g></svg>

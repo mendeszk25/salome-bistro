@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 390" fill="none" stroke="#a7633f" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<g class="engravable" opacity=".95">
+<path pathLength="1" d="M40 194 L300 44 L562 194 M75 197 L300 70 L526 197 M101 199 L101 318 H506 V199 M130 183 L130 300 H479 V183"/>
+<path pathLength="1" d="M300 60 V29 L311 35 V58 M83 191 Q290 99 516 191 M110 207 H498 M110 216 H498"/>
+<path pathLength="1" d="M154 218 V306 M173 218 V306 M208 218 V306 M227 218 V306 M261 218 V306 M280 218 V306 M316 218 V306 M335 218 V306 M371 218 V306 M390 218 V306 M425 218 V306 M444 218 V306" opacity=".48"/>
+<path pathLength="1" d="M155 235 H251 V299 H155 Z M348 235 H443 V299 H348 Z M167 235 V299 M238 235 V299 M360 235 V299 M430 235 V299 M154 260 H251 M348 260 H443"/>
+<path pathLength="1" d="M286 224 V316 M315 224 V316 M276 223 H325 M270 317 H330" stroke-width="4" opacity=".7"/>
+<path pathLength="1" d="M94 332 H513 M67 343 H532 M38 354 H564" opacity=".8"/>
+<path pathLength="1" d="M44 310 C46 276 69 275 76 310 M39 310 C21 282 32 267 47 286 M51 299 C73 278 93 286 79 309 M514 314 C516 275 539 266 548 306 M526 297 C502 270 496 284 512 315 M543 293 C560 272 581 294 552 319"/>
+<path pathLength="1" d="M244 198 Q300 174 356 198 M259 199 Q300 185 341 199" opacity=".7"/>
+</g><g opacity=".48" stroke-width="1"><path d="M32 369 H180 M418 369 H566 M300 353 V377 M285 366 H315"/><circle cx="300" cy="365" r="7"/><path d="M300 9 V23 M290 15 H310"/></g></svg>

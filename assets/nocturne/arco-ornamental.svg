@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 622 900" fill="none" aria-label="arco-ornamental.svg"><defs><linearGradient id="copper" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f3d2a5"/><stop offset=".46" stop-color="#c88b58"/><stop offset="1" stop-color="#a45a3b"/></linearGradient><linearGradient id="warm" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d5a270"/><stop offset="1" stop-color="#8a4b36"/></linearGradient></defs><g stroke="url(#copper)" stroke-linejoin="round" stroke-linecap="round"><path d="M23 875 V310 C23 154 146 24 309 24 C470 24 599 154 599 310 V875" stroke-width="3.1"/><path d="M41 859 V310 C41 163 156 42 309 42 C464 42 581 163 581 310 V859" stroke-width="1"/><path d="M61 312 C61 177 165 61 309 61 C452 61 560 177 560 312" stroke-width=".95" stroke-dasharray="2 10"/><path d="M20 815 Q80 790 102 742 M599 815 Q534 790 518 742" stroke-width="2.1"/>
+<path d="M23 380 C112 354 122 289 110 257 C93 214 57 239 74 268 C90 291 112 259 94 249" stroke-width="2.2"/><path d="M599 380 C510 354 500 289 512 257 C529 214 565 239 548 268 C532 291 510 259 528 249" stroke-width="2.2"/>
+<path d="M178 82 Q310 -12 441 82 M189 96 Q310 17 432 96" stroke-width="1.15"/>
+<path d="M309 13 C328 44 337 63 309 92 C281 63 290 44 309 13Z" stroke-width="1.6"/>
+</g><g transform="translate(97 710) rotate(-19) scale(0.45)" stroke="url(#copper)" stroke-linecap="round" stroke-linejoin="round">
+ <path stroke-width="2" d="M0 0 C-37 -31 -50 -97 -2 -143 C31 -119 44 -49 0 0Z"/>
+ <path stroke-width=".8" d="M0 -3 C-7 -43 -12 -81 -2 -140 M-7 -36 L-29 -63 M-9 -57 L15 -87 M-9 -78 L-22 -106 M-7 -98 L7 -119"/>
+ <path opacity=".42" stroke-width=".62" d="M-20 -47 l13 7 M-27 -66 l16 10 M-25 -86 l15 9 M-16 -106 l10 8 M15 -47 l-18 10 M20 -65 l-25 14 M17 -90 l-22 13"/>
+ <path stroke-width=".75" opacity=".6" d="M-1 -141 Q-15 -124 -18 -105 M-29 -55 Q-24 -27 0 -3"/></g><g transform="translate(525 710) rotate(15) scale(0.45)" stroke="url(#copper)" stroke-linecap="round" stroke-linejoin="round">
+ <path stroke-width="2" d="M0 0 C-37 -31 -50 -97 -2 -143 C31 -119 44 -49 0 0Z"/>
+ <path stroke-width=".8" d="M0 -3 C-7 -43 -12 -81 -2 -140 M-7 -36 L-29 -63 M-9 -57 L15 -87 M-9 -78 L-22 -106 M-7 -98 L7 -119"/>
+ <path opacity=".42" stroke-width=".62" d="M-20 -47 l13 7 M-27 -66 l16 10 M-25 -86 l15 9 M-16 -106 l10 8 M15 -47 l-18 10 M20 -65 l-25 14 M17 -90 l-22 13"/>
+ <path stroke-width=".75" opacity=".6" d="M-1 -141 Q-15 -124 -18 -105 M-29 -55 Q-24 -27 0 -3"/></g><g transform="translate(121 210) rotate(-29) scale(0.32)" stroke="url(#copper)" stroke-linecap="round" stroke-linejoin="round">
+ <path stroke-width="2" d="M0 0 C-37 -31 -50 -97 -2 -143 C31 -119 44 -49 0 0Z"/>
+ <path stroke-width=".8" d="M0 -3 C-7 -43 -12 -81 -2 -140 M-7 -36 L-29 -63 M-9 -57 L15 -87 M-9 -78 L-22 -106 M-7 -98 L7 -119"/>
+ <path opacity=".42" stroke-width=".62" d="M-20 -47 l13 7 M-27 -66 l16 10 M-25 -86 l15 9 M-16 -106 l10 8 M15 -47 l-18 10 M20 -65 l-25 14 M17 -90 l-22 13"/>
+ <path stroke-width=".75" opacity=".6" d="M-1 -141 Q-15 -124 -18 -105 M-29 -55 Q-24 -27 0 -3"/></g><g transform="translate(495 210) rotate(24) scale(0.32)" stroke="url(#copper)" stroke-linecap="round" stroke-linejoin="round">
+ <path stroke-width="2" d="M0 0 C-37 -31 -50 -97 -2 -143 C31 -119 44 -49 0 0Z"/>
+ <path stroke-width=".8" d="M0 -3 C-7 -43 -12 -81 -2 -140 M-7 -36 L-29 -63 M-9 -57 L15 -87 M-9 -78 L-22 -106 M-7 -98 L7 -119"/>
+ <path opacity=".42" stroke-width=".62" d="M-20 -47 l13 7 M-27 -66 l16 10 M-25 -86 l15 9 M-16 -106 l10 8 M15 -47 l-18 10 M20 -65 l-25 14 M17 -90 l-22 13"/>
+ <path stroke-width=".75" opacity=".6" d="M-1 -141 Q-15 -124 -18 -105 M-29 -55 Q-24 -27 0 -3"/></g></svg>
