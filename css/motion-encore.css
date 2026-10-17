@@ -14,7 +14,7 @@
 /* Efeito editorial simples, sempre perceptível em hover sem ser um item obrigatório para navegação */
 @media (hover:hover) and (pointer:fine){.gallery-grid .g-photo img{transition:filter .4s ease,scale .7s cubic-bezier(.2,.8,.2,1)}.gallery-grid .g-photo:hover img{scale:1.08;filter:saturate(1.15) contrast(1.07)}.food-to-menu:hover .food-to-menu-arrow{transform:rotate(45deg) scale(1.12)}}
 @media(max-width:650px){.mo-progress{height:3px}.mo-replay{margin-top:12px;font-size:11px}.mo-curtain-label{font-size:clamp(54px,18vw,88px)}}
-@media(prefers-reduced-motion:reduce){.mo-progress,.mo-cinematic-curtain,.mo-replay{display:none!important}.mo-chapter-arriving::after{display:none!important}.gallery-grid .g-photo img{transition:none!important}}
+@media(prefers-reduced-motion:reduce){html:not(.iphone-motion-full) .mo-progress,html:not(.iphone-motion-full) .mo-cinematic-curtain,html:not(.iphone-motion-full) .mo-replay{display:none!important}html:not(.iphone-motion-full) .mo-chapter-arriving::after{display:none!important}html:not(.iphone-motion-full) .gallery-grid .g-photo img{transition:none!important}}
 /* Transformações de capítulos e cortinas não devem criar scroll horizontal. */
 html,body{max-width:100%;overflow-x:clip}
 .mo-reduced-notice{color:#f1ca8b;font:500 12px/1.5 'DM Sans',Arial,sans-serif;margin-top:12px}

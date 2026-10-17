@@ -1,0 +1,40 @@
+/* Salomé — iPhone Safari fix: no emoji glyphs, accessible animation preference.
+   All styles are gated by .iphone-device; no desktop or Android changes. */
+@media(max-width:650px){
+  html.iphone-device .iphone-symbol{display:inline-flex;align-items:center;justify-content:center;vertical-align:-.13em;line-height:1;color:inherit;width:.9em;height:.9em;flex:none}
+  html.iphone-device .iphone-symbol svg{display:block;width:100%;height:100%;overflow:visible;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;fill:none}
+  html.iphone-device .hero-v3 .hero-strap{white-space:nowrap;font-size:clamp(8px,2.36vw,10px);letter-spacing:.065em}
+  html.iphone-device .hero-strap .iphone-symbol-star{color:#f1ca8b;width:.72em;height:.72em;margin-inline:.24em;vertical-align:0}
+  html.iphone-device .ticker .iphone-symbol-star,html.iphone-device .dir-music-track .iphone-symbol-star{color:#f1ca8b}
+  html.iphone-device .poster-circle .iphone-symbol-star{font-size:40px;width:.85em;height:.85em;color:#f1ca8b}
+  html.iphone-device .food-to-menu-arrow .iphone-symbol{width:1em;height:1em}
+  html.iphone-device .iphone-motion-toggle{display:grid;place-items:center;flex:none;width:38px;height:38px;padding:8px;border:1px solid #f1ca8b75;border-radius:50%;background:transparent;color:#f1ca8b;cursor:pointer;touch-action:manipulation}
+  html.iphone-device .iphone-motion-toggle svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.6}
+  html.iphone-device .iphone-motion-toggle:focus-visible{outline:2px solid #f1ca8b;outline-offset:3px}
+  html.iphone-device .head-actions{gap:10px}
+  html.iphone-device .iphone-motion-panel{position:absolute;top:calc(100% + 8px);right:max(12px,env(safe-area-inset-right));width:min(324px,calc(100vw - 24px));z-index:200;border:1px solid #f1ca8b79;background:#351225;box-shadow:0 18px 35px #18060f9c;padding:20px 18px;border-radius:8px;color:#f4e9d8;text-align:left;font:400 14px/1.5 'DM Sans',Arial,sans-serif;letter-spacing:normal}
+  html.iphone-device .iphone-motion-panel[hidden]{display:none!important}
+  html.iphone-device .iphone-motion-panel strong{display:block;color:#f1ca8b;font:600 16px/1.3 'DM Sans',Arial,sans-serif;margin-bottom:8px}
+  html.iphone-device .iphone-motion-panel p{font-size:13px;line-height:1.55;margin:0 0 12px;color:#f0dfd4}
+  html.iphone-device .iphone-motion-option{display:block;width:100%;min-height:44px;padding:10px 12px;margin-top:6px;text-align:left;background:#512037;border:1px solid #f1ca8b45;border-radius:4px;color:#f4e9d8;font:500 13px/1.4 'DM Sans',Arial,sans-serif;touch-action:manipulation}
+  html.iphone-device .iphone-motion-option[aria-pressed="true"]{background:#f1ca8b;color:#301020;border-color:#f1ca8b}
+  html.iphone-device .iphone-motion-option:focus-visible{outline:2px solid #f1ca8b;outline-offset:2px}
+  html.iphone-device .iphone-motion-panel small{display:block;margin-top:12px;opacity:.75}
+  /* Explicit consent wins over the OS CSS reduction only on this iPhone. */
+  html.iphone-motion-full .hero-journey{height:205svh!important}
+  html.iphone-motion-full .hero-stage{position:sticky!important;top:70px!important;height:calc(100svh - 70px)!important;min-height:0!important}
+  html.iphone-motion-full .hero-journey .hero-v2{min-height:0!important}
+  html.iphone-motion-full .hero-v3 .hero-art{transform:scale(calc(1 + var(--h2-photo)*.12))!important;opacity:1!important}
+  html.iphone-motion-full .hero-v3 .hero-art>img:not(.ornament){transform:scale(calc(1 + var(--h2-photo)*.05))!important;object-position:64% 72%!important}
+  html.iphone-motion-full .hero-v3 .hero-copy{transform:translate3d(0,calc(var(--h2-title)*-30px),0)!important;opacity:1!important}
+  html.iphone-motion-full .hero-journey+.welcome{position:relative}
+  html.iphone-motion-full .mm-hero-ornament{display:block!important}
+  /* For explicit reduce setting when OS Reduce Motion is not enabled. */
+  html.iphone-motion-reduced .hero-journey{height:auto!important}
+  html.iphone-motion-reduced .hero-stage{position:relative!important;top:auto!important;height:auto!important;min-height:790px!important}
+  html.iphone-motion-reduced .hero-journey .hero-v2{min-height:790px!important}
+  html.iphone-motion-reduced .hero-v3 .hero-art,html.iphone-motion-reduced .hero-v3 .hero-art>img:not(.ornament),html.iphone-motion-reduced .hero-v3 .hero-copy{transform:none!important}
+  html.iphone-motion-reduced .mo-replay,html.iphone-motion-reduced .mm-hero-ornament{display:none!important}
+  html.iphone-motion-reduced .dir-music-band,html.iphone-motion-reduced .dir-music-halo{display:none!important}
+}
+@media(max-width:380px){html.iphone-motion-full .hero-v3 .hero-art>img:not(.ornament){object-position:64% 70%!important}}

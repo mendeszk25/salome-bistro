@@ -6,12 +6,12 @@
   const doc = document, $=(s,p=doc)=>p.querySelector(s);
   const mq=matchMedia('(prefers-reduced-motion: reduce)');
   const low=(navigator.connection?.saveData || (navigator.deviceMemory||8)<=2);
-  const state={edition:'2.7',heroPlays:0,musicScrollUpdates:0,galleryFlips:0,enabled:!mq.matches};
+  const state={edition:'2.7',heroPlays:0,musicScrollUpdates:0,galleryFlips:0,enabled:!(window.SalomeIphoneMotion?.shouldReduce() ?? mq.matches)};
   window.SalomeDirector=state;
   const hero=$('.hero');
   let opening=null,heroTimer=null;
   function heroCurtain(replay=false){
-    if(mq.matches || !hero || !hero.animate || doc.hidden) return;
+    if((window.SalomeIphoneMotion?.shouldReduce() ?? mq.matches) || !hero || !hero.animate || doc.hidden) return;
     opening?.remove();
     const root=doc.createElement('div'); root.className='dir-hero-opening';root.setAttribute('aria-hidden','true');
     for(let i=0;i<2;i++){const panel=doc.createElement('div');panel.className='dir-shutter';root.append(panel)}
@@ -29,7 +29,7 @@
     heroTimer=setTimeout(()=>{if(opening===root)opening=null;root.remove()},duration+delay+120);
   }
   // A cena estreia automaticamente; o botão existente repete a experiência.
-  if(hero && !hero.closest('.hero-journey') && !mq.matches) requestAnimationFrame(()=>heroCurtain());
+  if(hero && !hero.closest('.hero-journey') && !(window.SalomeIphoneMotion?.shouldReduce() ?? mq.matches)) requestAnimationFrame(()=>heroCurtain());
   if(!hero?.closest('.hero-journey')) $('.mo-replay')?.addEventListener('click',()=>heroCurtain(true));
 
   const music=$('#musica'), posters=$('.music-posters');
@@ -42,12 +42,12 @@
     ribbon.append(track);music.append(ribbon);
     const io=new IntersectionObserver(entries=>{
       visible=entries.some(e=>e.isIntersecting);
-      music.classList.toggle('dir-in-view',visible&&!mq.matches);
+      music.classList.toggle('dir-in-view',visible&&!(window.SalomeIphoneMotion?.shouldReduce() ?? mq.matches));
       if(visible) queue();
     },{rootMargin:'12% 0px'});io.observe(music);
     function render(){
       ticking=false;
-      if(!visible || mq.matches) return;
+      if(!visible || (window.SalomeIphoneMotion?.shouldReduce() ?? mq.matches)) return;
       const rect=music.getBoundingClientRect(),p=Math.min(1,Math.max(0,(innerHeight-rect.top)/(innerHeight+rect.height)));
       // Deslocamento real de 33vw enquanto a seção atravessa a viewport.
       track.style.transform=`translate3d(calc(-15% + ${((p-.5)*-33).toFixed(2)}vw),0,0)`;
@@ -64,7 +64,7 @@
   const dialog=$('#lightbox');
   doc.addEventListener('click',event=>{
     const button=event.target.closest('[data-gallery-index]');
-    if(!button || !dialog || mq.matches || low) return;
+    if(!button || !dialog || (window.SalomeIphoneMotion?.shouldReduce() ?? mq.matches) || low) return;
     const thumb=$('img',button);if(!thumb)return;
     const start=thumb.getBoundingClientRect();
     const source=thumb.currentSrc || thumb.src;

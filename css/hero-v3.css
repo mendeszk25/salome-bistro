@@ -149,7 +149,7 @@
  .hero-v3 .hero-art>img:not(.ornament){object-position:64% 70%}
 }
 @media(prefers-reduced-motion:reduce){
- .hero-v3-scrollcue i{animation:none}
- .hero-v3 .hero-art,.hero-v3 .hero-art>img:not(.ornament),.hero-v3 .hero-copy{transform:none!important;opacity:1!important}
- .hero-v3-photo-credit,.hero-v3-scrollcue{opacity:1}
+ html:not(.iphone-motion-full) .hero-v3-scrollcue i{animation:none}
+ html:not(.iphone-motion-full) .hero-v3 .hero-art,html:not(.iphone-motion-full) .hero-v3 .hero-art>img:not(.ornament),html:not(.iphone-motion-full) .hero-v3 .hero-copy{transform:none!important;opacity:1!important}
+ html:not(.iphone-motion-full) .hero-v3-photo-credit,html:not(.iphone-motion-full) .hero-v3-scrollcue{opacity:1}
 }

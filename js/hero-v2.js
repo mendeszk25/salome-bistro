@@ -20,7 +20,7 @@
   let queued=false;
   const update=()=>{
     queued=false;
-    if(reduced.matches)return;
+    if((window.SalomeIphoneMotion?.shouldReduce() ?? reduced.matches))return;
     const rect=journey.getBoundingClientRect();
     // A progressão acompanha toda a pista sticky; o CSS define a distância em svh.
     const travel=Math.max(1,journey.offsetHeight-innerHeight);
@@ -36,7 +36,7 @@
   const animate=(el,keyframes,opt)=>el?.animate?.(keyframes,{fill:'both',easing:'cubic-bezier(.16,1,.3,1)',...opt});
   let playing=false;
   function replay(){
-    if(reduced.matches||playing||document.hidden)return;
+    if((window.SalomeIphoneMotion?.shouldReduce() ?? reduced.matches)||playing||document.hidden)return;
     playing=true;state.replays++;
     const active=[];
     const a=animate(photo,[{clipPath:'inset(14% 10% 12% 10%)',opacity:.6},{clipPath:'inset(0% 0% 0% 0%)',opacity:1}],{duration:1160,easing:'cubic-bezier(.76,0,.24,1)'});if(a)active.push(a);
@@ -48,10 +48,10 @@
   // Entrada única após fontes estarem prontas; sem esconder a página se o JS falhar.
   let introStarted=false;
   Promise.race([document.fonts?.ready||Promise.resolve(),new Promise(r=>setTimeout(r,550))]).then(()=>{
-    if(!introStarted && !reduced.matches && scrollY<180){introStarted=true;requestAnimationFrame(replay)}
+    if(!introStarted && !(window.SalomeIphoneMotion?.shouldReduce() ?? reduced.matches) && scrollY<180){introStarted=true;requestAnimationFrame(replay)}
   });
   reduced.addEventListener('change',()=>{
-    if(reduced.matches){for(const n of ['--h2-scroll','--h2-photo','--h2-title'])root.style.setProperty(n,'0');}
+    if((window.SalomeIphoneMotion?.shouldReduce() ?? reduced.matches)){for(const n of ['--h2-scroll','--h2-photo','--h2-title'])root.style.setProperty(n,'0');}
     else queue();
   });
   // A próxima seção é Nossa História original: não há painel intermediário nem tela bege vazia.

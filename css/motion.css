@@ -26,9 +26,9 @@ html.mo-pre .mo-word>span{transform:translateY(112%) rotate(7deg) skewY(5deg)}
 .welcome-copy h2,.kitchen-top h2{overflow:visible}
 .welcome-facade,.food-gallery figure{will-change:clip-path,transform}
 .food-gallery figure,.welcome-facade{overflow:hidden}
-@media(prefers-reduced-motion:reduce){[data-mo-rev]{opacity:1}
-  html.mo-pre .hero-art{clip-path:none}
-  html.mo-pre .hero-art>img:not(.ornament),html.mo-pre .mo-word>span,html.mo-pre .site-header,html.mo-pre [class^="hero-"],html.mo-pre .hero-buttons>*{transform:none;opacity:1}
+@media(prefers-reduced-motion:reduce){html:not(.iphone-motion-full) [data-mo-rev]{opacity:1}
+  html:not(.iphone-motion-full).mo-pre .hero-art{clip-path:none}
+  html:not(.iphone-motion-full).mo-pre .hero-art>img:not(.ornament),html:not(.iphone-motion-full).mo-pre .mo-word>span,html:not(.iphone-motion-full).mo-pre .site-header,html:not(.iphone-motion-full).mo-pre [class^="hero-"],html:not(.iphone-motion-full).mo-pre .hero-buttons>*{transform:none;opacity:1}
 }
 /* Fases 3–4: identidade dinâmica, progressive enhancement */
 .menu-search {transition: box-shadow .3s ease, background-color .3s ease, transform .3s var(--mo-out)}
@@ -44,4 +44,4 @@ html.mo-pre .mo-word>span{transform:translateY(112%) rotate(7deg) skewY(5deg)}
 .mo-gallery-cursor.visible{opacity:1}
 .lightbox img{transform-origin:center center}
 @media(hover:none),(pointer:coarse),(max-width:900px){.mo-gallery-cursor{display:none}.g-photo{will-change:auto}.gig-poster{will-change:auto}}
-@media(prefers-reduced-motion:reduce){.mo-gallery-cursor{display:none}.g-photo{transition:none!important;transform:none!important}.gig-poster{transform:none!important}.menu-search{transition:none!important}}
+@media(prefers-reduced-motion:reduce){html:not(.iphone-motion-full) .mo-gallery-cursor{display:none}html:not(.iphone-motion-full) .g-photo{transition:none!important;transform:none!important}html:not(.iphone-motion-full) .gig-poster{transform:none!important}html:not(.iphone-motion-full) .menu-search{transition:none!important}}

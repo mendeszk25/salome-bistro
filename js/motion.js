@@ -6,7 +6,7 @@
   const mqReduce = matchMedia('(prefers-reduced-motion: reduce)');
   const mqTouch = matchMedia('(hover: none), (pointer: coarse)');
   const flags = {
-    reduced: mqReduce.matches,
+    reduced: (window.SalomeIphoneMotion?.shouldReduce() ?? mqReduce.matches),
     touch: mqTouch.matches,
     // aparelho modesto: poucos núcleos/memória ou Save-Data
     low: (navigator.hardwareConcurrency || 8) <= 4 || (navigator.deviceMemory || 8) <= 2 || !!navigator.connection?.saveData

@@ -14,13 +14,13 @@
   const clamp = (v, min = 0, max = 1) => Math.min(max, Math.max(min, v));
   const ease = 'cubic-bezier(.16,1,.3,1)';
   const cinematic = 'cubic-bezier(.76,0,.24,1)';
-  const state = { edition: '3.0.0', enabled: false, heroReplays: 0, headings: 0, photos: 0, menuBatches: 0, galleryOpens: 0, swipes: 0, scrollFrames: 0, reduced: reduced.matches, lowPower };
+  const state = { edition: '3.0.0', enabled: false, heroReplays: 0, headings: 0, photos: 0, menuBatches: 0, galleryOpens: 0, swipes: 0, scrollFrames: 0, reduced: (window.SalomeIphoneMotion?.shouldReduce() ?? reduced.matches), lowPower };
   window.SalomeMobileMotion = state;
   let started = false, dispose = [], active = new Set();
   const cleanup = fn => { dispose.push(fn); return fn; };
   const listen = (el, type, fn, opt) => { el?.addEventListener(type, fn, opt); cleanup(() => el?.removeEventListener(type, fn, opt)); };
   const play = (el, frames, opts = {}) => {
-    if (!el?.animate || reduced.matches || !mobile.matches || document.hidden) return null;
+    if (!el?.animate || (window.SalomeIphoneMotion?.shouldReduce() ?? reduced.matches) || !mobile.matches || document.hidden) return null;
     const a = el.animate(frames, { duration: 850, easing: ease, ...opts });
     active.add(a);
     a.finished.catch(() => {}).finally(() => { active.delete(a); try { a.cancel(); } catch (_) {} });
@@ -94,7 +94,7 @@
     const stroke = q('path', ornaments);
     const duration = lowPower ? 620 : 1300;
     function intro() {
-      if (!mobile.matches || reduced.matches || document.hidden) return;
+      if (!mobile.matches || (window.SalomeIphoneMotion?.shouldReduce() ?? reduced.matches) || document.hidden) return;
       state.heroReplays++;
       play(stroke, [{ strokeDasharray: '620', strokeDashoffset: 620, opacity: .2 }, { strokeDasharray: '620', strokeDashoffset: 0, opacity: .8 }], { duration, easing: cinematic });
       if (lines.length) lines.forEach((line, i) => play(line, [
@@ -233,7 +233,7 @@
     let frame = 0;
     function update() {
       frame = 0;
-      if (doc.hidden || reduced.matches || !mobile.matches) return;
+      if (doc.hidden || (window.SalomeIphoneMotion?.shouldReduce() ?? reduced.matches) || !mobile.matches) return;
       state.scrollFrames++;
       for (const t of targets) {
         const r = t.el.getBoundingClientRect();
@@ -255,7 +255,7 @@
     queue();
   }
   function start() {
-    if (started || !mobile.matches || reduced.matches) return;
+    if (started || !mobile.matches || (window.SalomeIphoneMotion?.shouldReduce() ?? reduced.matches)) return;
     started = true; state.enabled = true; root.classList.add('mm-active');
     hero(); story(); gastronomy(); menu(); music(); experiences(); gallery(); ending(); scrollLayers();
   }
@@ -267,7 +267,7 @@
     qa('[data-mm-split]').forEach(el => { el.innerHTML = el.dataset.mmOriginal || el.innerHTML; delete el.dataset.mmSplit; delete el.dataset.mmOriginal; });
   }
   // Atualizações dinâmicas: suporta rotação da tela e mudança de preferência de movimento.
-  const handleChange = () => { state.reduced = reduced.matches; if (mobile.matches && !reduced.matches) start(); else stop(); };
+  const handleChange = () => { state.reduced = (window.SalomeIphoneMotion?.shouldReduce() ?? reduced.matches); if (mobile.matches && !(window.SalomeIphoneMotion?.shouldReduce() ?? reduced.matches)) start(); else stop(); };
   mobile.addEventListener('change', handleChange); reduced.addEventListener('change', handleChange);
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', handleChange, { once: true }); else handleChange();
 })();

@@ -10,7 +10,7 @@
   const $$ = (s, p=doc) => [...p.querySelectorAll(s)];
   const ease = 'cubic-bezier(.16, 1, .3, 1)';
   const clamp = (n,min=0,max=1) => Math.min(max, Math.max(min,n));
-  const state = { version:'2.7.0', enabled:!reduce.matches, entries:0, transitions:0, replays:0, scrollFrames:0 };
+  const state = { version:'2.7.0', enabled:!(window.SalomeIphoneMotion?.shouldReduce() ?? reduce.matches), entries:0, transitions:0, replays:0, scrollFrames:0 };
   window.SalomeMotionEncore = state;
   const animate = (el,frames,options) => {
     if (!el || !state.enabled || !el.animate) return null;
@@ -54,12 +54,9 @@
     busy=false;
   }
   replay.addEventListener('click', replayIntro);
-  if(reduce.matches){
-    replay.hidden=true;
-    const notice=doc.createElement('p');notice.className='mo-reduced-notice';
-    notice.textContent='Movimento reduzido está ativado nas configurações do dispositivo.';
-    heroButtons?.insertAdjacentElement('afterend',notice);
-  }
+  // iPhone movement preferences have a discreet, accessible control in the header.
+  // Never show system-status text inside the cinematic Hero.
+  if((window.SalomeIphoneMotion?.shouldReduce() ?? reduce.matches)) replay.hidden=true;
   state.replay = replayIntro;
 
   // Navegação dentro da página recebe cortina cinematográfica, mas mantém âncoras reais.
