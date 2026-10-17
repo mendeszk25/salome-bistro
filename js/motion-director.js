@@ -29,8 +29,8 @@
     heroTimer=setTimeout(()=>{if(opening===root)opening=null;root.remove()},duration+delay+120);
   }
   // A cena estreia automaticamente; o botão existente repete a experiência.
-  if(hero && !mq.matches) requestAnimationFrame(()=>heroCurtain());
-  $('.mo-replay')?.addEventListener('click',()=>heroCurtain(true));
+  if(hero && !hero.closest('.hero-journey') && !mq.matches) requestAnimationFrame(()=>heroCurtain());
+  if(!hero?.closest('.hero-journey')) $('.mo-replay')?.addEventListener('click',()=>heroCurtain(true));
 
   const music=$('#musica'), posters=$('.music-posters');
   let visible=false,ticking=false;

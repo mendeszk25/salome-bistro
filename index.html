@@ -20,11 +20,11 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="assets/brand/salome-og.jpg">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="preload" as="image" href="assets/hero-hd.webp" imagesrcset="assets/hero-640.webp 640w, assets/hero-1080.webp 1080w, assets/hero-hd.webp 2025w" imagesizes="(max-width: 650px) 100vw, 45vw" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/hero-hd-v295.webp" imagesrcset="assets/hero-640-v295.webp 640w, assets/hero-1150-v295.webp 1150w, assets/hero-1600-v295.webp 1600w, assets/hero-hd-v295.webp 1672w" imagesizes="(max-width: 650px) 100vw, (max-width: 900px) 91vw, 76vw" fetchpriority="high">
   <link rel="stylesheet" href="css/site.css">
   <link rel="stylesheet" href="css/motion.css">
-  <link rel="stylesheet" href="css/motion-encore.css"><link rel="stylesheet" href="css/motion-director.css">
-  <script>(function(){var d=document.documentElement;if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&"animate"in Element.prototype){d.classList.add("mo-pre");setTimeout(function(){d.classList.remove("mo-pre")},3500)}})()</script>
+  <link rel="stylesheet" href="css/motion-encore.css"><link rel="stylesheet" href="css/motion-director.css"><link rel="stylesheet" href="css/hero-v2.css"><link rel="stylesheet" href="css/hero-v3.css"><link rel="stylesheet" href="css/mobile-motion.css">
+  
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -37,23 +37,28 @@
     <nav class="mobile-nav" id="mobile-nav" hidden aria-label="Menu para celular"><a href="#a-casa">A casa</a><a href="#cozinha">Gastronomia</a><a href="#cardapio">Cardápio</a><a href="#musica">Música & encontros</a><a href="#galeria">Galeria</a><a href="#visite">Visite</a></nav>
   </header>
   <main id="conteudo" tabindex="-1">
-    <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="hero-journey" id="inicio" data-hero-v2="editorial" data-hero-v3="cinematic-cover" aria-label="Salomé Bistrô — abertura cinematográfica">
+      <div class="hero-stage">
+        <section class="hero hero-v2 hero-v3" aria-labelledby="hero-title">
       <div class="hero-copy">
         <div class="hero-edition"><span>GRAVATÁ, PERNAMBUCO</span><span>DESDE 2022</span></div>
-        <div class="hero-main"><p class="hero-strap">GASTRONOMIA, MÚSICA & GENTE</p>
+        <div class="hero-main"><p class="hero-strap">GASTRONOMIA <span aria-hidden="true">✳</span> MÚSICA <span aria-hidden="true">✳</span> BONS ENCONTROS</p>
           <h1 id="hero-title">Boa comida.<br><em>Muitas</em> <span class="hero-memorias">memórias</span></h1>
           <p class="hero-description">Uma casa para chegar sem pressa, reunir os amigos e transformar qualquer encontro em história boa.</p>
           <div class="hero-buttons"><a class="btn btn-cream" href="#cardapio">Conheça nosso cardápio <span>↗</span></a><a class="hero-text-link" href="#musica">Sinta o clima da casa <span>↓</span></a></div>
         </div>
         <div class="hero-smallprint"><span>UMA CASA, MUITOS ENCONTROS.</span><img class="ornament hero-smallprint-ornament" src="assets/ornamentos/filete-deco.svg" width="92" height="18" alt="" aria-hidden="true"><span>O MELHOR É FICAR MAIS UM POUCO.</span></div>
       </div>
-      <div class="hero-art"><img src="assets/hero-hd.webp" srcset="assets/hero-640.webp 640w, assets/hero-1080.webp 1080w, assets/hero-hd.webp 2025w" sizes="(max-width: 650px) 100vw, 45vw" alt="Fachada real do Salomé Bistrô em Gravatá, com letreiro, varanda e scooter" fetchpriority="high" decoding="async" width="2025" height="2415">
+      <div class="hero-art"><img src="assets/hero-hd-v295.webp" srcset="assets/hero-640-v295.webp 640w, assets/hero-1150-v295.webp 1150w, assets/hero-1600-v295.webp 1600w, assets/hero-hd-v295.webp 1672w" sizes="(max-width: 650px) 100vw, (max-width: 900px) 91vw, 76vw" alt="Representação da fachada do Salomé Bistrô, com letreiro, varanda, pilares de madeira e plantas" fetchpriority="high" decoding="async" width="1672" height="941">
         <img class="ornament hero-corner-ornament" src="assets/ornamentos/cantoneira-deco.svg" width="100" height="100" alt="" aria-hidden="true"><div class="hero-photo-top"><span>O LUGAR ONDE A NOITE ACONTECE</span><span>↘</span></div>
         <div class="hero-orange-stamp" aria-hidden="true"><span>COMIDA<br>ENCONTROS<br>HISTÓRIAS</span><span class="stamp-star">✦</span></div>
         <div class="hero-photo-bottom"><span>DA NOSSA CASA PARA A SUA MEMÓRIA</span><span>© SALOMÉ BISTRÔ</span></div>
       </div>
-    </section>
-    <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>CHEGUE COM FOME</span><b>✳</b><span>FIQUE PELA MÚSICA</span><b>✳</b><span>VOLTE PELAS HISTÓRIAS</span><b>✳</b><span>CHEGUE COM FOME</span><b>✳</b><span>FIQUE PELA MÚSICA</span><b>✳</b><span>VOLTE PELAS HISTÓRIAS</span><b>✳</b></div></div>
+      <div class="hero-v3-scrollcue" aria-hidden="true"><span>DESÇA E CONHEÇA A NOSSA HISTÓRIA</span><i>↓</i></div>
+      <div class="hero-v3-photo-credit" aria-hidden="true">GRAVATÁ • PE &nbsp; / &nbsp; SALOMÉ BISTRÔ</div>
+        </section>
+      </div>
+    </div>
     <section class="welcome" id="a-casa" aria-labelledby="welcome-title">
       <div class="section-label"><span>O SALOMÉ</span><span class="section-label-dash"></span><span>UMA HISTÓRIA PARA COMPARTILHAR</span></div>
       <div class="welcome-layout"><img class="ornament welcome-signature" src="assets/ornamentos/flor-musica-culinaria.svg" width="210" height="140" alt="" aria-hidden="true">
@@ -65,6 +70,7 @@
         <div class="welcome-visual"><figure class="welcome-facade"><img src="assets/interior-luzes.jpg" loading="lazy" alt="Detalhe da área coberta do Salomé, com pilares de madeira, plantas e iluminação" width="355" height="230"><figcaption>Na entrada, um convite para ficar — Gravatá, PE</figcaption></figure><img class="welcome-scooter" src="assets/letreiro.jpg" loading="lazy" alt="Detalhe do letreiro da fachada do Salomé" width="355" height="400"></div>
       </div>
     </section>
+    <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>CHEGUE COM FOME</span><b>✳</b><span>FIQUE PELA MÚSICA</span><b>✳</b><span>VOLTE PELAS HISTÓRIAS</span><b>✳</b><span>CHEGUE COM FOME</span><b>✳</b><span>FIQUE PELA MÚSICA</span><b>✳</b><span>VOLTE PELAS HISTÓRIAS</span><b>✳</b></div></div>
     <section class="kitchen" id="cozinha" aria-labelledby="kitchen-title">
       <div class="kitchen-top"><p class="section-index">DA COZINHA PARA A MESA</p><h2 id="kitchen-title">Tempero de casa.<br><em>Vontade de repetir.</em></h2><p class="kitchen-intro">Porções para dividir, pratos para lembrar e drinks para brindar. Aqui, a comida não fica em segundo plano.</p></div>
       <img class="ornament kitchen-engraving" src="assets/ornamentos/gravura-abacaxi.svg" width="200" height="302" alt="" aria-hidden="true"><div class="food-gallery"><img class="ornament kitchen-citrus" src="assets/ornamentos/gravura-citrico.svg" width="168" height="155" alt="" aria-hidden="true"><figure class="food-one"><img src="assets/gastronomia/abacaxi-real.webp" loading="lazy" alt="Prato do Salomé servido em uma metade de abacaxi" width="784" height="949"><figcaption><span>01 / DA NOSSA COZINHA</span><strong>Comida que vira assunto.</strong></figcaption></figure><figure class="food-two"><img src="assets/gastronomia/travessa-real.webp" loading="lazy" alt="Travessa de comida preparada no Salomé" width="938" height="978"><figcaption>FEITO PARA COMPARTILHAR ↗</figcaption></figure><figure class="food-three"><img src="assets/gastronomia/drink-hero-hd.webp" loading="lazy" alt="Coquetel vermelho com gelo e casca de laranja" width="1466" height="1886"><figcaption>UM BRINDE AO QUE IMPORTA</figcaption></figure></div>
@@ -92,8 +98,8 @@
     </section>
     <section class="visit" id="visite" aria-labelledby="visit-title"><div class="visit-main"><div><p class="section-index">SUA PRÓXIMA HISTÓRIA COMEÇA AQUI</p><h2 id="visit-title">A casa está<br><em>de portas abertas.</em></h2></div><div class="visit-description"><p>Estamos em Gravatá, PE. Venha descobrir o que acontece quando boa comida, música e bons encontros dividem a mesma mesa.</p><a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=Avenida+Cicero+Batista+de+Oliveira+1425+Gravata+PE" target="_blank" rel="noopener noreferrer">Como chegar <span>↗</span></a><a class="btn btn-outline" href="https://www.instagram.com/salomebistro/" target="_blank" rel="noopener noreferrer">Instagram oficial <span>↗</span></a></div></div><div class="visit-details"><div><span>ENDEREÇO INFORMADO NO INSTAGRAM</span><strong>Avenida Cícero Batista de Oliveira, 1425</strong><small>Gravatá, Pernambuco · Confirme antes da visita</small></div><div><span>HORÁRIOS E PROGRAMAÇÃO</span><strong>Consulte os canais oficiais</strong><small>Informações sujeitas a alterações</small></div><div><span>CONTATO</span><strong><a class="visit-contact" href="https://www.instagram.com/salomebistro/" target="_blank" rel="noopener noreferrer">@salomebistro ↗</a></strong><small>Pergunte à equipe sobre reservas, horários e disponibilidade.</small></div></div></section>
   </main>
-  <footer class="footer"><img class="ornament footer-signature" src="assets/ornamentos/flor-musica-culinaria.svg" width="185" height="124" alt="" aria-hidden="true"><div class="footer-top"><div class="footer-brand-heading"><p>Boa comida.<br><em>Muitas memórias.</em></p></div><a class="footer-visit" href="#inicio" aria-label="Voltar ao topo">↑</a></div><div class="footer-wordmark"><img src="assets/brand/salome-lettering.svg" width="629" height="283" alt="Salomé bistrô" loading="lazy" decoding="async"></div><div class="footer-bottom"><span>GRAVATÁ — PERNAMBUCO</span><nav aria-label="Navegação do rodapé"><a href="#cozinha">Gastronomia</a><a href="#cardapio">Cardápio</a><a href="#musica">Música</a><a href="#visite">Visite</a></nav><span>© SALOMÉ BISTRÔ</span></div></footer>
-  <dialog class="lightbox" id="lightbox" aria-label="Galeria de fotografias"><button class="lightbox-close" type="button" aria-label="Fechar imagem">×</button><button class="lightbox-prev" type="button" aria-label="Imagem anterior">←</button><figure><img id="lightbox-img" src="assets/hero-hd.webp" alt="" width="2025" height="2415"><figcaption id="lightbox-caption" aria-live="polite"></figcaption></figure><button class="lightbox-next" type="button" aria-label="Próxima imagem">→</button></dialog>
-  <script defer src="js/menu-data.js"></script><script defer src="js/app.js"></script><script defer src="js/motion.js"></script><script defer src="js/motion-encore.js"></script><script defer src="js/motion-director.js"></script>
+  <footer class="footer"><img class="ornament footer-signature" src="assets/ornamentos/flor-musica-culinaria.svg" width="185" height="124" alt="" aria-hidden="true"><div class="footer-top"><div class="footer-brand-heading"><p>Boa comida.<br><em>Muitas memórias.</em></p></div><a class="footer-visit" href="#inicio" aria-label="Voltar ao topo">↑</a></div><div class="footer-wordmark"><img src="assets/brand/salome-lettering.svg" width="629" height="283" alt="Salomé bistrô" loading="lazy" decoding="async"></div><div class="footer-bottom"><span>GRAVATÁ — PERNAMBUCO</span><nav aria-label="Navegação do rodapé"><a href="#cozinha">Gastronomia</a><a href="#cardapio">Cardápio</a><a href="#musica">Música</a><a href="#visite">Visite</a></nav><span class="footer-signoff"><span>© SALOMÉ BISTRÔ</span><span class="footer-credit">CRÉDITOS · <a href="https://www.instagram.com/mendeszk__/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de @mendeszk__">@mendeszk__ <span aria-hidden="true">↗</span></a></span></span></div></footer>
+  <dialog class="lightbox" id="lightbox" aria-label="Galeria de fotografias"><button class="lightbox-close" type="button" aria-label="Fechar imagem">×</button><button class="lightbox-prev" type="button" aria-label="Imagem anterior">←</button><figure><img id="lightbox-img" src="assets/hero-hd-v295.webp" alt="" width="1672" height="941"><figcaption id="lightbox-caption" aria-live="polite"></figcaption></figure><button class="lightbox-next" type="button" aria-label="Próxima imagem">→</button></dialog>
+  <script defer src="js/menu-data.js"></script><script defer src="js/app.js"></script><script defer src="js/motion.js"></script><script defer src="js/motion-encore.js"></script><script defer src="js/motion-director.js"></script><script defer src="js/hero-v2.js"></script><script defer src="js/mobile-motion.js"></script>
 </body>
 </html>

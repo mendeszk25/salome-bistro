@@ -63,7 +63,7 @@
 
   /* ---------- Módulo: Hero ---------- */
   mods.push(function hero() {
-    const hero = q('.hero'); if (!hero) return;
+    const hero = q('.hero'); if (!hero || hero.closest('.hero-journey')) return;
     const h1 = q('#hero-title', hero);
     const art = q('.hero-art', hero), img = q('.hero-art>img:not(.ornament)', hero);
     const copy = q('.hero-copy', hero), stamp = q('.hero-orange-stamp', hero), corner = q('.hero-corner-ornament', hero);
@@ -181,6 +181,7 @@
 
   /* ---------- Módulo: Nossa História — narrativa guiada pelo scroll ---------- */
   mods.push(function story() {
+    if (matchMedia('(max-width:650px)').matches) return;
     const sec = q('#a-casa'); if (!sec || flags.reduced) return;
     const h2 = q('#welcome-title', sec), label = q('.section-label', sec);
     const ps = qa('.welcome-copy>p, .welcome-copy>.underlink', sec);
@@ -208,6 +209,7 @@
 
   /* ---------- Módulo: Gastronomia — a seção de maior impacto fotográfico ---------- */
   mods.push(function kitchen() {
+    if (matchMedia('(max-width:650px)').matches) return;
     const sec = q('#cozinha'); if (!sec || flags.reduced) return;
     const h2 = q('#kitchen-title', sec);
     revealOnce(h2, titleIn(h2, 0), .35); h2?.removeAttribute('data-mo-rev');
@@ -245,6 +247,7 @@
 
   /* ===================== FASE 3: CARDÁPIO, MÚSICA, EXPERIÊNCIAS ===================== */
   mods.push(function cardapioMotion() {
+    if (matchMedia('(max-width:650px)').matches) return;
     const section = q('#cardapio'), results = q('#menu-results');
     if (!section || !results || flags.reduced) return;
     const headline = q('#menu-title', section);
@@ -286,6 +289,7 @@
   });
 
   mods.push(function musicMotion() {
+    if (matchMedia('(max-width:650px)').matches) return;
     const section = q('#musica'); if(!section || flags.reduced) return;
     const title = q('#music-title', section), poster = q('.gig-poster', section);
     const paper = q('.music-posters', section);
@@ -324,6 +328,7 @@
   });
 
   mods.push(function togetherMotion() {
+    if (matchMedia('(max-width:650px)').matches) return;
     const sec=q('.together');if(!sec||flags.reduced)return;
     const heading=q('#together-title',sec),frame=q('.together-visual',sec),pic=q('.together-visual>img',sec),tag=q('.round-tag',sec);
     revealOnce(heading,titleIn(heading),.22);
@@ -339,6 +344,7 @@
 
   /* ===================== FASE 4: GALERIA, CONTATO, RODAPÉ ===================== */
   mods.push(function galleryMotion() {
+    if (matchMedia('(max-width:650px)').matches) return;
     const sec=q('#galeria'),dialog=q('#lightbox'),modalImage=q('#lightbox-img');if(!sec||!dialog||!modalImage||flags.reduced)return;
     revealOnce(q('#gallery-title',sec),titleIn(q('#gallery-title',sec)),.27);
     const cards=qa('.g-photo',sec);

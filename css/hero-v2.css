@@ -1,0 +1,61 @@
+/* Salomé Bistrô — Hero v2.9.4 | clareza foto real, sem gerar detalhes artificiais
+   Hero v2.9.3 | scroll cinematográfico com percurso ampliado
+   A cena permanece sticky por mais distância de scroll (230svh desktop, 205svh mobile),
+   sem interferir na rolagem nativa do navegador e respeitando reduced-motion.
+   Mantém foto HD da versão 2.9.2, sem filtros escurecedores
+   No resto do site, o design e as animações são preservados.
+   Salomé Bistrô — Hero v2 | direção editorial cinematográfica
+   Trabalha apenas na abertura e na ligação visual com Nossa História.
+   O restante do sistema gráfico (fontes, cores, cardápio, música, galeria) permanece. */
+:root{--h2-scroll:0;--h2-photo:0;--h2-title:0;--h2-mat:0;--h2-head:76px}
+.hero-journey{position:relative;height:230svh;background:var(--wine)}
+.hero-stage{position:sticky;top:var(--h2-head);height:calc(100svh - var(--h2-head));min-height:0;overflow:hidden;isolation:isolate;background:var(--wine)}
+.hero-journey .hero-v2{position:relative;display:block;height:100%;width:100%;min-height:0;background:radial-gradient(ellipse at 76% 45%,#64283a5e,transparent 63%),radial-gradient(ellipse at 12% 95%,#d86b3e18,transparent 34%),var(--wine);color:var(--cream);isolation:isolate;overflow:hidden;transform:none}
+.hero-v2::before{content:"";position:absolute;inset:19px 22px;border:1px solid #f1ca8b50;z-index:2;pointer-events:none}
+.hero-v2::after{content:"";position:absolute;width:min(38vw,520px);height:72%;left:29%;bottom:-21%;background:url('../assets/nocturne/jardim-da-memoria.svg') center/contain no-repeat;opacity:.075;pointer-events:none;z-index:1;transform:translate3d(0,calc(var(--h2-scroll)*-36px),0)}
+.hero-v2 .hero-copy{position:absolute;z-index:9;inset:0 auto 0 0;width:56%;min-width:0;padding:clamp(28px,3.4vw,54px) 0 clamp(30px,4vw,65px) clamp(48px,6.2vw,112px);display:flex;justify-content:space-between;flex-direction:column;background:transparent;transform:translate3d(0,calc(var(--h2-title) * -36px),0);opacity:calc(1 - var(--h2-title) * .92);pointer-events:auto}
+.hero-v2 .hero-edition{font:600 11px var(--poster);letter-spacing:.23em;color:var(--gold);padding-right:2vw}
+.hero-v2 .hero-edition span:last-child{display:none}
+.hero-v2 .hero-main{margin:0;padding:0;position:relative;transform:translateY(-1.5%)}
+.hero-v2 .hero-strap{font:600 clamp(11px,1.07vw,14px) var(--poster);letter-spacing:.22em;color:var(--gold);margin:0 0 clamp(22px,2.3vw,35px);white-space:normal}
+.hero-v2 .hero-strap::after{display:none}
+.hero-v2 #hero-title{max-width:none;margin:0;white-space:nowrap;font:400 clamp(61px,5.48vw,100px)/.99 var(--serif);letter-spacing:-.047em;color:var(--cream);text-wrap:nowrap;text-shadow:0 5px 26px #260b1740}
+.hero-v2 #hero-title em{font:italic 400 .86em var(--editorial);letter-spacing:-.074em;color:var(--gold)}
+.hero-v2 #hero-title .hero-memorias{display:inline!important;white-space:nowrap}
+.hero-v2 .hero-description{max-width:375px;margin:clamp(22px,2.2vw,32px) 0 0;font:400 clamp(13px,.98vw,16px)/1.75 var(--body);letter-spacing:0;color:#f4ddd1}
+.hero-v2 .hero-buttons{margin-top:clamp(21px,2.2vw,35px);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.hero-v2 .btn-cream{min-height:52px;padding:16px 21px;background:var(--gold);color:var(--wine);border:1px solid var(--gold);font:700 12px var(--body);box-shadow:none}
+.hero-v2 .btn-cream:hover,.hero-v2 .btn-cream:focus-visible{background:var(--cream);transform:translateY(-2px)}
+.hero-v2 .hero-text-link{min-height:52px;display:inline-flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;border:1px solid #f1ca8b8a;background:#32101f65;font:600 12px var(--body);transition:background .22s,transform .22s,border-color .22s}
+.hero-v2 .hero-text-link span{margin:0}.hero-v2 .hero-text-link:hover,.hero-v2 .hero-text-link:focus-visible{background:#7a354758;border-color:var(--gold);transform:translateY(-2px)}
+.hero-v2 .hero-smallprint{font:600 10px var(--poster);letter-spacing:.18em;color:var(--gold);opacity:.86;gap:12px;justify-content:flex-start}
+.hero-v2 .hero-smallprint span:last-child{display:none}.hero-v2 .hero-smallprint-ornament{width:80px;opacity:.55}
+.hero-v2 .hero-art{position:absolute;z-index:3;overflow:hidden;inset:9% 5% 8% auto;width:48%;height:auto;min-height:0;background:#38211f;border:1px solid #e4b47c85;border-radius:47% 47% 0 0/22% 22% 0 0;box-shadow:0 22px 70px #1a061b45;transform:translate3d(calc(var(--h2-photo)*-1.8vw),0,0) scale(calc(1 + var(--h2-photo)*.31));transform-origin:76% 50%;will-change:transform}
+.hero-v2 .hero-art::before{content:"";position:absolute;inset:0;z-index:2;opacity:1;background:linear-gradient(90deg,#3b122629 0%,#3b122610 22%,transparent 44%),linear-gradient(0deg,#3b122625,transparent 17%);pointer-events:none;clip-path:none;border:0}
+.hero-v2 .hero-art::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,#150a0f0c,transparent 19%,transparent 85%,#270d1a10);pointer-events:none}
+.hero-v2 .hero-art>img:not(.ornament){display:block;width:100%;height:100%;object-fit:cover;object-position:51% 46%;filter:none;transform:scale(calc(1 + var(--h2-photo)*.025));will-change:transform}
+/* Retirar competição visual; elementos antigos permanecem no projeto original/backups. */
+.hero-v2 .hero-orange-stamp,.hero-v2 .hero-corner-ornament,.hero-v2 .hero-photo-top,.hero-v2 .hero-photo-bottom{display:none!important}
+.hero-v2 .hero-art+.hero-v2-faux{display:none}
+.hero-v2 .mo-replay{margin-top:18px;color:var(--gold);font-size:11px;letter-spacing:.025em}
+.hero-v2 .hero-edition,.hero-v2 .hero-smallprint{opacity:calc(.95 - var(--h2-title) * .8)}
+/* Uma única borda externa e arco: ornamentos ficam silenciosos. */
+.hero-v2 .hero-art{outline:1px solid #f1ca8b42;outline-offset:12px}
+/* Depois do Hero, a seção Nossa História original entra diretamente, sem painel intermediário. */
+
+
+
+
+
+
+
+
+/* O destino real começa imediatamente depois da jornada do Hero. */
+.hero-journey+.welcome{background:var(--paper);position:relative;z-index:1;scroll-margin-top:var(--h2-head)}
+.hero-journey+.welcome .section-label{margin-top:0}
+@media (max-width:1220px){.hero-v2 #hero-title{font-size:clamp(56px,5.6vw,78px)}.hero-v2 .hero-copy{width:58%;padding-left:5.3vw}.hero-v2 .hero-art{right:3.6%;width:49%}.hero-v2 .hero-buttons{gap:11px}.hero-v2 .btn-cream,.hero-v2 .hero-text-link{font-size:11px;padding:13px 15px}}
+@media (max-width:900px){:root{--h2-head:75px}.hero-v2 .hero-copy{width:61%;padding-left:5vw}.hero-v2 #hero-title{font-size:clamp(47px,6vw,63px)}.hero-v2 .hero-art{width:50%;right:3.5%;top:12%;bottom:9%}.hero-v2 .hero-description{max-width:300px;font-size:13px}.hero-v2 .hero-strap{font-size:11px}}
+@media (max-width:650px){:root{--h2-head:70px}.hero-journey{height:205svh}.hero-stage{height:calc(100svh - 70px)}.hero-journey .hero-v2{min-height:0;display:block}.hero-v2::before{inset:12px 12px}.hero-v2::after{opacity:.045}.hero-v2 .hero-copy{top:0;left:0;right:0;bottom:auto;height:auto;width:100%;min-height:0;padding:clamp(25px,5svh,45px) 25px 0;display:block;transform:translate3d(0,calc(var(--h2-title)*-23px),0);position:absolute}.hero-v2 .hero-edition,.hero-v2 .hero-smallprint{display:none}.hero-v2 .hero-main{transform:none;padding:0;margin:0}.hero-v2 .hero-strap{font-size:11px;letter-spacing:.16em;margin:0 0 16px}.hero-v2 #hero-title{font-size:clamp(44px,11.8vw,66px);line-height:1.01;letter-spacing:-.047em;margin:0}.hero-v2 #hero-title em{font-size:.86em}.hero-v2 .hero-description{font-size:13px;line-height:1.55;max-width:340px;margin:15px 0 0}.hero-v2 .hero-buttons{gap:8px;margin-top:18px;flex-wrap:wrap;align-items:stretch}.hero-v2 .btn-cream,.hero-v2 .hero-text-link{min-height:44px;font-size:11px;padding:10px 12px;gap:10px}.hero-v2 .mo-replay{font-size:10px;margin-top:9px;padding:4px 0}.hero-v2 .hero-art{position:absolute;top:51%;left:15%;right:5%;bottom:6%;width:auto;height:auto;min-height:0;max-height:none;border-radius:43% 43% 0 0/21% 21% 0 0;transform-origin:74% 50%;outline-offset:7px}.hero-v2 .hero-art>img:not(.ornament){object-position:54% 47%}.hero-v2 .hero-art{box-shadow:0 10px 38px #1a061b60}}
+@media (max-width:380px){.hero-v2 .hero-copy{padding-left:19px;padding-right:18px;padding-top:22px}.hero-v2 #hero-title{font-size:clamp(41px,11.7vw,47px)}.hero-v2 .hero-description{font-size:12px;margin-top:12px;max-width:290px}.hero-v2 .hero-strap{font-size:10px;margin-bottom:12px}.hero-v2 .hero-buttons{margin-top:14px}.hero-v2 .btn-cream,.hero-v2 .hero-text-link{font-size:10px;min-height:42px;padding:9px 10px}.hero-v2 .hero-art{top:54%;left:14%;right:4%;bottom:5%}}
+@media(prefers-reduced-motion:reduce){.hero-journey{height:auto!important}.hero-stage{position:relative;top:auto;height:auto;min-height:800px}.hero-journey .hero-v2{min-height:800px}.hero-v2 .hero-art,.hero-v2 .hero-art>img:not(.ornament),.hero-v2 .hero-copy{transform:none!important;opacity:1!important}.hero-journey+.welcome{position:relative}}
+@media(prefers-reduced-motion:reduce) and (max-width:650px){.hero-stage{min-height:790px}.hero-journey .hero-v2{min-height:790px}}

@@ -1,0 +1,155 @@
+/* v2.9.6 — enquadramento mobile da fachada: letreiro centralizado, sem alterar movimento. */
+/* Salomé Bistrô v2.9.4 — remoção dos filtros que anulavam nitidez e clareza da foto.
+   Preserva a passagem por scroll da v2.9.3.
+   Salomé Bistrô v2.9 — retrato cinematográfico editorial
+   Direção visual substitui a janela em arco da v2.8 por uma cena fotográfica
+   imersiva, sem criar novas animações concorrentes. A sequência de scroll
+   e movimento até Nossa História são governados por hero-v2.js. */
+.hero-journey{background:#260d1a}
+.hero-journey .hero-v3{
+ background:#270e1b;
+ overflow:hidden;
+ isolation:isolate;
+}
+.hero-v3::before{
+ inset:clamp(16px,2vw,30px);border:1px solid rgba(241,202,139,.30);
+ z-index:13;opacity:calc(.75 - var(--h2-title)*.6);
+ transition:opacity .1s linear;
+}
+.hero-v3::after{
+ content:"";display:block;position:absolute;z-index:8;pointer-events:none;
+ left:-7%;top:7%;bottom:auto;width:48%;height:84%;
+ background:radial-gradient(ellipse at 55% 50%, rgba(144,55,76,.11), transparent 70%);
+ opacity:1;transform:none;
+}
+/* Uma única fachada real, em plano fotográfico imersivo — sem arco nem bloco direito. */
+.hero-v3 .hero-art{
+ display:block;position:absolute;inset:0 -1% 0 auto;
+ height:100%;width:76%;min-height:0;max-height:none;
+ background:#3f2326;border:0;border-radius:0;outline:none;box-shadow:none;
+ overflow:hidden;z-index:2;
+ -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.19) 11%,#000 36%,#000 100%);
+ mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.19) 11%,#000 36%,#000 100%);
+ transform:translate3d(calc(var(--h2-photo)*-2vw),0,0) scale(calc(1 + var(--h2-photo)*.18));
+ transform-origin:85% 52%;
+}
+.hero-v3 .hero-art::before{
+ content:"";position:absolute;z-index:3;inset:0;opacity:1;border:0;clip-path:none;
+ background:linear-gradient(90deg,rgba(48,15,31,.12) 0%,transparent 36%),linear-gradient(0deg,rgba(22,5,13,.25) 0%,transparent 25%),linear-gradient(180deg,rgba(30,6,17,.10),transparent 24%);
+ pointer-events:none;
+}
+.hero-v3 .hero-art::after{
+ content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+ background:linear-gradient(90deg,transparent 72%,rgba(40,13,24,.03)),linear-gradient(180deg,transparent 86%,rgba(31,7,20,.06));
+ mix-blend-mode:normal;
+}
+.hero-v3 .hero-art>img:not(.ornament){
+ width:100%;height:100%;object-fit:cover;object-position:62% 42%;
+ filter:none;
+ transform:scale(calc(1 + var(--h2-photo)*.035));transform-origin:60% 50%;
+}
+/* A dramaturgia acontece num eixo só: título, convite e fotografia. */
+.hero-v3 .hero-copy{
+ inset:0 auto 0 0;z-index:10;width:min(77%,1120px);height:100%;
+ padding:clamp(48px,6.1vh,88px) 4vw clamp(46px,6vh,83px) clamp(58px,7.2vw,135px);
+ display:flex;flex-direction:column;justify-content:space-between;
+ background:none;
+ text-shadow:0 4px 27px rgba(25,6,12,.27);
+ transform:translate3d(0,calc(var(--h2-title)*-49px),0);
+}
+.hero-v3 .hero-edition{display:flex;justify-content:flex-start;gap:34px;padding:0;
+ font:600 11px var(--poster);letter-spacing:.24em;color:#f1ca8b;}
+.hero-v3 .hero-edition::after{content:"";width:75px;height:1px;align-self:center;background:#f1ca8b8e;}
+.hero-v3 .hero-main{margin:0;transform:translateY(-5%);padding:0;max-width:100%}
+.hero-v3 .hero-strap{margin-bottom:clamp(21px,2.8vw,39px);font:600 clamp(11px,.95vw,14px) var(--poster);
+ letter-spacing:.23em;color:#f1ca8b;white-space:normal}
+.hero-v3 .hero-strap span{margin-inline:.35em;color:#d98d64;}
+.hero-v3 #hero-title{
+ white-space:nowrap;text-wrap:nowrap;max-width:100%;margin:0;
+ font:400 clamp(80px,6.9vw,130px)/.98 var(--serif);
+ letter-spacing:-.058em;color:#fff2e2;text-shadow:0 4px 28px rgba(28,5,16,.34);
+}
+.hero-v3 #hero-title em{
+ font:italic 400 .82em var(--editorial);letter-spacing:-.085em;
+ color:#f0be7a;text-shadow:0 3px 20px #280d1945;
+}
+.hero-v3 #hero-title .hero-memorias{white-space:nowrap;display:inline!important}
+.hero-v3 .hero-description{max-width:390px;margin:clamp(24px,2.4vw,40px) 0 0;
+ font:400 clamp(14px,1.07vw,17px)/1.75 var(--body);color:#f7ddd4;
+ text-shadow:0 3px 17px #190c13a8;}
+.hero-v3 .hero-buttons{margin-top:clamp(23px,2.4vw,36px);gap:15px;flex-wrap:wrap}
+.hero-v3 .btn-cream,.hero-v3 .hero-text-link{min-height:54px;font:700 12px var(--body);letter-spacing:-.012em}
+.hero-v3 .btn-cream{padding:16px 22px;background:#f1ca8b;border:1px solid #f1ca8b;box-shadow:0 10px 28px #220b1680;}
+.hero-v3 .hero-text-link{padding:15px 20px;background:#300b2094;border:1px solid #f1ca8b8f;
+ backdrop-filter:blur(5px);}
+.hero-v3 .hero-smallprint{font:600 11px var(--poster);letter-spacing:.2em;gap:18px;opacity:.9}
+.hero-v3 .hero-smallprint span:last-child{display:none}
+.hero-v3 .hero-smallprint-ornament{opacity:.6}
+.hero-v3 .mo-replay{font:500 11px var(--body);color:#f1ca8b;}
+/* Um único ponto de profundidade: assinatura discreta no canto fotográfico. */
+.hero-v3-photo-credit{position:absolute;z-index:11;right:clamp(52px,5.5vw,105px);bottom:clamp(50px,6.1vh,90px);
+ color:#f7ddbf;font:600 10px var(--poster);letter-spacing:.2em;text-shadow:0 2px 10px #200b1b;opacity:calc(.85 - var(--h2-title)*.9)}
+.hero-v3-scrollcue{position:absolute;z-index:11;bottom:clamp(44px,5.1vh,65px);left:50%;transform:translateX(-50%);
+ display:flex;flex-direction:column;align-items:center;gap:10px;color:#f1ca8b;
+ font:600 10px var(--poster);letter-spacing:.2em;text-align:center;white-space:nowrap;
+ opacity:calc(.85 - var(--h2-title)*1.15);pointer-events:none}
+.hero-v3-scrollcue i{display:grid;place-items:center;width:30px;height:30px;border:1px solid #f1ca8b99;border-radius:50%;font:400 18px Georgia,serif;animation:h3-down 2.2s ease-in-out infinite}
+@keyframes h3-down{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+/* A seção Nossa História surge diretamente após a saída cinematográfica do Hero. */
+@media(max-width:1220px){
+ .hero-v3 .hero-copy{padding-left:6.5vw;width:81%}
+ .hero-v3 #hero-title{font-size:clamp(72px,7.3vw,104px)}
+ .hero-v3 .hero-art{width:78%}
+ .hero-v3 .hero-description{max-width:345px}
+}
+@media(max-width:900px){
+ .hero-v3 .hero-copy{width:91%;padding-left:5.4vw;padding-top:6vh;padding-bottom:5vh}
+ .hero-v3 #hero-title{font-size:clamp(65px,8.3vw,80px)}
+ .hero-v3 .hero-art{width:91%;}
+ .hero-v3 .hero-strap{font-size:11px}
+ .hero-v3 .hero-description{max-width:315px;font-size:14px}
+ .hero-v3-photo-credit{right:5vw}
+ .hero-v3-scrollcue{left:57%}
+}
+@media(max-width:650px){
+ .hero-journey .hero-v3{background:#2e0e1e;}
+ .hero-v3::before{inset:11px;opacity:.48}
+ .hero-v3::after{width:100%;left:0;top:0;height:65%;background:linear-gradient(180deg,rgba(58,18,38,.60),transparent);opacity:1}
+ .hero-v3 .hero-art{inset:0;left:0;width:100%;height:100%;max-height:none;border:0;border-radius:0;
+ -webkit-mask-image:none;mask-image:none;transform:scale(calc(1 + var(--h2-photo)*.12));transform-origin:55% 74%;}
+ .hero-v3 .hero-art>img:not(.ornament){object-position:64% 72%;filter:none;
+ transform:scale(calc(1 + var(--h2-photo)*.05));}
+ .hero-v3 .hero-art::before{background:linear-gradient(180deg,#2e0e1ef2 0%,#2e0e1ee6 18%,#2e0e1ea8 39%,#2e0e1e12 65%,#2e0e1e25 100%),linear-gradient(90deg,#2e0e1e40,transparent 76%);}
+ .hero-v3 .hero-copy{position:absolute;inset:0;width:100%;height:100%;max-height:none;
+ padding:clamp(33px,5vh,50px) 23px 34px;justify-content:flex-start;transform:translate3d(0,calc(var(--h2-title)*-30px),0);}
+ .hero-v3 .hero-edition{display:flex;font-size:10px;margin:0 0 clamp(30px,5.8vh,54px);}
+ .hero-v3 .hero-edition::after{width:38px}
+ .hero-v3 .hero-main{transform:none;max-width:100%}
+ .hero-v3 .hero-strap{margin-bottom:16px;font-size:10px;letter-spacing:.12em}
+ .hero-v3 #hero-title{font-size:clamp(43px,11.7vw,67px);letter-spacing:-.053em;line-height:1.015;white-space:nowrap}
+ .hero-v3 #hero-title em{font-size:.82em}
+ .hero-v3 .hero-description{margin-top:19px;max-width:325px;font-size:13px;line-height:1.55;color:#fff0e3}
+ .hero-v3 .hero-buttons{margin-top:20px;gap:9px}
+ .hero-v3 .btn-cream,.hero-v3 .hero-text-link{min-height:44px;padding:11px 14px;font-size:11px}
+ .hero-v3 .mo-replay{margin-top:13px;color:#f8dfb7;font-size:10px}
+ .hero-v3 .hero-smallprint{display:none}
+ .hero-v3-photo-credit{bottom:49px;right:25px;font-size:9px}
+ .hero-v3-scrollcue{bottom:42px;left:27%;font-size:9px;gap:6px}
+ .hero-v3-scrollcue span{display:none}
+ .hero-v3-scrollcue i{width:27px;height:27px;font-size:15px}
+}
+@media(max-width:380px){
+ .hero-v3 .hero-copy{padding:26px 18px 28px}
+ .hero-v3 .hero-edition{margin-bottom:26px;font-size:9px}
+ .hero-v3 .hero-strap{font-size:9px;margin-bottom:13px;letter-spacing:.11em}
+ .hero-v3 #hero-title{font-size:clamp(39px,11.7vw,47px)}
+ .hero-v3 .hero-description{font-size:12px;max-width:260px;margin-top:14px}
+ .hero-v3 .hero-buttons{margin-top:14px;gap:8px}
+ .hero-v3 .btn-cream,.hero-v3 .hero-text-link{font-size:10px;min-height:42px;padding:9px 11px}
+ .hero-v3 .hero-art>img:not(.ornament){object-position:64% 70%}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-v3-scrollcue i{animation:none}
+ .hero-v3 .hero-art,.hero-v3 .hero-art>img:not(.ornament),.hero-v3 .hero-copy{transform:none!important;opacity:1!important}
+ .hero-v3-photo-credit,.hero-v3-scrollcue{opacity:1}
+}

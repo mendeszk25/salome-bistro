@@ -29,6 +29,7 @@
   replay.textContent='Rever abertura ↻'; replay.setAttribute('aria-label','Rever a animação cinematográfica de abertura');
   const heroButtons = $('.hero-buttons');heroButtons?.insertAdjacentElement('afterend',replay);
   async function replayIntro() {
+    if(window.SalomeHeroV2?.replay) { window.SalomeHeroV2.replay(); return; }
     if(!state.enabled || busy) return;
     busy=true;state.replays++;
     const hero=$('.hero'),art=$('.hero-art'),main=$('.hero-main');
@@ -103,7 +104,7 @@
   if(state.enabled && 'IntersectionObserver' in window){
     const lastPlayed = new WeakMap();
     observer=new IntersectionObserver(entries=>entries.forEach(e=>{
-      if(!e.isIntersecting)return;
+      if(!e.isIntersecting || matchMedia('(max-width:650px)').matches)return;
       const sec=e.target, cfg=chapters.find(c=>$(c.sec)===sec);
       if(!cfg)return;
       if(performance.now()-(lastPlayed.get(sec)||-9000)<3100)return;
@@ -140,6 +141,7 @@
     state.scrollFrames++;
     const body=doc.documentElement,max=body.scrollHeight-innerHeight;
     progress.style.transform=`scaleX(${max>0?clamp(scrollY/max):0})`;
+    if(matchMedia('(max-width:650px)').matches) return;
     tracks.forEach(t=>{
       const r=t.section.getBoundingClientRect();
       if(r.bottom<0||r.top>innerHeight)return;
